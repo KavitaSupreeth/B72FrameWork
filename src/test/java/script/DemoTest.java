@@ -5,19 +5,14 @@ import org.testng.annotations.Test;
 
 import Generic.BaseTest;
 import Generic.Excel;
-import page.GooglePage;
 
 public class DemoTest extends BaseTest
 {
 	@Test
-	public void demoTest1() throws InterruptedException {
+	public void demoTest1() {
 			String data = Excel.getData(XL_PATH,"sheet1",1,0);
 			Reporter.log("test data:"+data,true);
 			Reporter.log(driver.getTitle(),true);	
-			
-			GooglePage g=new GooglePage(driver);
-			g.setSearch(data);
-			Thread.sleep(3000);
 
 	}
 }
